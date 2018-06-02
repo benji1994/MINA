@@ -17,15 +17,15 @@ Page({
    */
   onLoad: function (options) {
     var category = options.category
-    this.setData({category})
+    this.setData({ category })
     var requestUrl = ''
     if (category === '正在热映')
       requestUrl = app.globalData.doubanBase + '/v2/movie/in_theaters'
     else if (category === '即将上映')
       requestUrl = app.globalData.doubanBase + '/v2/movie/coming_soon'
-    else if(category === '豆瓣电影Top250')
+    else if (category === '豆瓣电影Top250')
       requestUrl = app.globalData.doubanBase + '/v2/movie/top250'
-    this.setData({requestUrl})
+    this.setData({ requestUrl })
 
     util.http(requestUrl, this.processDoubanData)
   },
@@ -44,7 +44,6 @@ Page({
     })
     util.http(refreshUrl, this.processDoubanData)
     wx.showNavigationBarLoading()
-    wx.stopPullDownRefresh()
   },
 
   processDoubanData: function (moviesDouban) {
@@ -67,6 +66,7 @@ Page({
       totalCount
     })
     wx.hideNavigationBarLoading()
+    wx.stopPullDownRefresh()
   },
 
   /**
