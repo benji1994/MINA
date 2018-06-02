@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "文与字",
+  "usingComponents": {
+    "post-item": "post-item/post-item"
+  }
+}

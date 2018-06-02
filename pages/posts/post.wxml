@@ -1,0 +1,16 @@
+<view>
+  <swiper catch:tap='onSwiperTap' indicator-dots="{{true}}" autoplay="{{true}}" interval='5000'>
+    <swiper-item>
+      <image data-postid='3' src="/images/wx.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image data-postid='4' src="/images/vr.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image data-postid='5' src="/images/iqiyi.png"></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx" wx:key="item.postId">
+    <post-item item="{{item}}" bind:customTap='onCustomTap'></post-item>
+  </block>
+</view>

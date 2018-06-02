@@ -1,0 +1,5 @@
+{
+  "usingComponnents": {
+    "stars" : "../stars/stars"
+  }
+}

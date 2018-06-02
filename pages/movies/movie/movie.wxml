@@ -1,0 +1,5 @@
+<movie class="movie-container" bind:tap="onMovieTap">
+  <image class='movie-img' src='{{movie.coverageUrl}}'></image>
+  <text class='movie-title'>{{movie.title}}</text>
+  <star average='{{movie.average}}' stars='{{movie.stars}}'></star>
+</movie>

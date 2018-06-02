@@ -1,0 +1,20 @@
+<view class='search'>
+  <icon type='search' class='search-img' size='13' color='#405f80'></icon>
+  <input type='text' placeholder="{{placeHolder}}" value='{{inputValue}}' placeholder-class='placeholder' bind:focus="onBindFocus" bind:confirm="onBindConfirm"></input>
+  <image wx:if="{{searchPanelShow}}" src="/images/icon/xx.png" class="xx-img" bind:tap="onCancelImgTap"></image>
+</view>
+<view class='container' wx:if="{{containerShow}}">
+  <view class='movies-template'>
+    <movie-list movieCategory="{{inTheaters}}"></movie-list>
+  </view>
+  <view class='movies-template'>
+    <movie-list movieCategory="{{comingSoon}}"></movie-list>
+  </view>
+  <view class='movies-template'>
+    <movie-list movieCategory="{{top250}}"></movie-list>
+  </view>
+</view>
+
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+  <movie-grid movies="{{searchResult.movies}}"></movie-grid>
+</view>

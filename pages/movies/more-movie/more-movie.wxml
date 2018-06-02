@@ -1,0 +1,3 @@
+<view>
+   <movie-grid movies='{{movies}}' bind:customScrollLower='onCustomScrollLower'></movie-grid> 
+</view>

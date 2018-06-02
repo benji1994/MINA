@@ -1,0 +1,3 @@
+<scroll-view scroll-y='{{true}}' class="grid-container" bind:scrolltolower='onScrollLower'>
+  <movie wx:for='{{movies}}' wx:for-item='movie' wx:key='movie.movieId' movie='{{movie}}'></movie> 
+</scroll-view>

@@ -1,0 +1,6 @@
+<stars class='stars-container'>
+  <view class='stars'>
+     <image wx:for='{{starsArr}}' wx:key='index' src='{{"/images/icon/" + item + ".png"}}'></image> 
+  </view>
+  <text class='star-score'>{{average}}</text>
+</stars>
